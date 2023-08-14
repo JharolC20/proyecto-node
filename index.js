@@ -61,6 +61,7 @@ app.put('/personas/:id', (request, response) => {
             return response.json({ message: 'Persona actualizada exitosamente' });
         }
     }
+    response.status(404).send({message:'Persona no encontrada'});
 })
 
 app.get('/', (req, res) => {
@@ -70,3 +71,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
+
+module.exports=app

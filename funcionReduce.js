@@ -1,9 +1,16 @@
 
-const numeros = [1, 2, 3, 4];
 
- const resta = numeros.reduce( (acumulador, numero)=>
- acumulador + numero,2)
- console.log(resta)
+function suma(numeros) {
+    return numeros.reduce((acumulador, numero) =>
+        acumulador + numero,0);
+
+    
+}
+
+
+module.exports = suma;
+
+
 
 // var animales = ['perro', 'pollo', 'gato', 'perro', 'pollo', 'pollo', 'conejo'];
 
