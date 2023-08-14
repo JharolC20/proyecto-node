@@ -26,9 +26,11 @@ app.get('/personas', (request, response) => {
 app.get('/personas/:id', (request, response) => {
     let id = request.params.id
     console.log(id)
-    let busquedad = function (persona) {
-        return persona.id == id
-    }
+     let busquedad = function (persona) {
+         return persona.id == id
+     }
+    // let busquedad = (persona)=>persona.id==id
+
     let resultado = personas.filter(busquedad)
 
     if (resultado.length === 1) {
